@@ -1,3 +1,6 @@
 Stage-1
 =======
 --user model work
+---defining which fields are fillable in ourUser model
+---add admin column to users table
+---
