@@ -1,0 +1,25 @@
+Covering laravel 5.2 features
+=============================
+--Authentication Scaffolding ,
+--Authentication Drivers / “Multi-Auth” , &
+--Implicit model binding Too
+
+Project Name
+====================
+A Simple book store
+
+Features
+==========
+--order,
+--administration, and
+--cart features.
+
+Topics Covered
+==============
+--Building an authorization system
+--Creating and migrating authors, books, carts, and orders tables
+--Creating template files
+--Listing books
+--Building a shopping cart
+--Taking orders
+--Listing orders
