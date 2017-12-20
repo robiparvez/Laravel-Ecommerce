@@ -42,6 +42,7 @@
                             <li><a href="/"><i class="icon-home icon-white"></i> Book List</a></li>
     					</ul>
 
+
                         <div class="pull-right">
                             <ul class="nav pull-right">
                                 {{-- Check  --}}
@@ -50,17 +51,27 @@
                                         <li class="divider-vertical"></li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Sign In <strong class="caret"></strong></a>
-                                            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                            <div class="dropdown-menu" style="padding: 10px; padding-bottom: 0px;">
                                                 <p>Please Login!</p>
-                                                <form action="" method="POST" role="form">
-                                                    <legend>Form title</legend>
 
-                                                    <div class="form-group">
-                                                        <label for="">label</label>
-                                                        <input type="text" class="form-control" id="" placeholder="Input field">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                </form>
+                                                {{-- login form --}}
+        <form action="{{ URL::to('user/login')}}" method="POST" role="form" accept-charset="UTF-8">
+            {{ csrf_field() }}
+            {{-- {{ method_field() }} --}}
+
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" size="30">
+            </div>
+
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" size="30">
+            </div>
+
+            <button type="submit" class="btn btn-info" style="clear: left; width: 100%; height: 32px; font-size: 13px;">Sign In</button>
+        </form>
+
                                             </div>
                                         </li>
                                     </ul>

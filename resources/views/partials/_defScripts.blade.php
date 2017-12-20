@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    $(function() {
+  $(function() {
     $('.dropdown-toggle').dropdown();
 
     $('.dropdown input, .dropdown label').click(function(e) {
