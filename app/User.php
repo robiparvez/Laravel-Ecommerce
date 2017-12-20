@@ -11,28 +11,23 @@ class User extends Authenticatable
 
     protected $table = 'users';
 
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
     protected $hidden = [
         'password', 'remember_token',
     ];
+    protected $fillable = [
+        'name', 'email', 'password', 'admin',
+    ];
 
-    /*
-     * Get the unique identifier for the user.
-     * @return mixed
-     */
     public function getAuthIdentifier()
     {
-        return $this->password;
+        return $this->getKey();
     }
 
-    /*
-     * Get the e-mail address where password reminders are sent.
-     *
-     * @return string
-     */
+    public function setAuthPassword() //changed from getAuthPassword()
+    {
+        $this->password;
+    }
+
     public function getRemainderEmail()
     {
         return $this->email;

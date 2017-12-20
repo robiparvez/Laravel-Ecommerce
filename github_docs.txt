@@ -1,6 +1,12 @@
 Stage-1
 =======
---user model work
----defining which fields are fillable in ourUser model
----add admin column to users table
----
+# User model works
+--defining which fields are fillable in ourUser model
+--adding admin column to users table
+--creating database seeder and create logic on run() of DatabaseSeeder.php
+
+# Author Model
+--define $fillabe, $hidden, $table
+--create authors migration
+--
+
