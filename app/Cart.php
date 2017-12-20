@@ -10,8 +10,16 @@ class Cart extends Model
 
     protected $fillable = ['user_id', 'book_id', 'amount', 'total'];
 
+    //access User
+    public function setUser()
+    {
+        $this->belongsTo('App\User');
+    }
+
+    //access Book
     public function setBook()
     {
-    	$this->belongsTo('App\Book');
+        $this->belongsTo('App\Book');
     }
+
 }
