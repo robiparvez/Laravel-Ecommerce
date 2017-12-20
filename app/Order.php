@@ -13,8 +13,7 @@ class Order extends Model
    /*hasMany is used in a One To Many relationship
     while belongsToMany refers to a Many To Many relationship*/
 
-
-    public function setOderItems()//access Books and Pivot table (Order_Book)
+	public function setBooks()//access Books and Pivot table (Order_Book)
     {
         $this->belongsToMany('App\Book')->withPivot('amount', 'total'); //pivot function parameters are of "PIVOT TABLE"
     }
